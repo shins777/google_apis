@@ -1,4 +1,4 @@
-# 🗺️ Google Maps Platform & Gemini AI 엔터프라이즈 통합 스위트
+# 🗺️ Google Maps Platform & Gemini AI 
 
 Google Maps Platform의 핵심 Web Service API(Places New 포함 12종) 및 **Google Gemini 3.5 Flash LLM**을 결합하여 서울 주요 랜드마크 데이터 기반의 기능 검증과 지능형 맛집·카페·여행 코스 추천 시스템을 제공하는 파이썬 개발 툴킷입니다.
 
