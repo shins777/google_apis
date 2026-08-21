@@ -5,7 +5,7 @@ description: Google Maps Platform API와 Gemini Flash 모델을 결합하여 음
 
 # 🍽️ Google Maps + Gemini AI 음식점 & 여행 코스 시나리오 가이드 (`map_scenario`)
 
-본 가이드는 **Google Maps Platform API**와 **Gemini Flash 모델**을 연계하여 특정 음식점에 대한 5단계 심층 분석 및 맞춤형 여행 코스를 생성하는 주피터 노트북(`google_map/restaurant_scenario_recommendation.ipynb`)의 요구사항과 구현 방안을 정의합니다.
+본 가이드는 **Google Maps Platform API**와 **Gemini Flash 모델**을 연계하여 특정 음식점에 대한 5단계 심층 분석 및 맞춤형 여행 코스를 생성하는 주피터 노트북(`google_map/recommendation_w_map.ipynb`)의 요구사항과 구현 방안을 정의합니다.
 
 ---
 
@@ -110,7 +110,7 @@ GEMINI_API_KEY=AIzaSy...your_gemini_api_key_here
 
 ---
 
-## 📁 3. 산출물 노트북 표준 구조 (`restaurant_scenario_recommendation.ipynb`)
+## 📁 3. 산출물 노트북 표준 구조 (`recommendation_w_map.ipynb`)
 
 1. **[Markdown] 프로젝트 소개 & 5단계 아키텍처 개요**
 2. **[Code] 라이브러리 임포트 & .env 키 로드 (Maps & Gemini)**
