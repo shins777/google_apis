@@ -67,11 +67,14 @@ GOOGLE_MAPS_API_KEY=AIzaSy...your_actual_api_key_here
 
 ### 3. 노트북 실행
 
-VS Code 또는 JupyterLab에서 [`google_map/google_maps_api_test.ipynb`](google_map/google_maps_api_test.ipynb) 파일을 열고 상단부터 순차적으로 셀을 실행합니다.
+VS Code 또는 JupyterLab에서 아래 노트북을 열고 실행합니다:
+1. **[`google_map/google_maps_api_test.ipynb`](google_map/google_maps_api_test.ipynb)**: 12개 Google Maps Platform API의 입출력 및 서울 랜드마크 전수 검증
+2. **[`google_map/restaurant_scenario_recommendation.ipynb`](google_map/restaurant_scenario_recommendation.ipynb)**: Gemini 3.5 Flash + Maps API 결합 맛집/리뷰/유사식당/식후카페/도보·차량 여행 코스 추천
 
 ---
 
-### 📁 에이전트 스킬 (Agent Skill)
+### 📁 에이전트 스킬 (Agent Skills)
 
 본 프로젝트에는 노트북 생성 및 유지보수 명세를 담은 전용 스킬이 정의되어 있습니다:
-- [`.agents/skills/map_api_test/SKILL.md`](.agents/skills/map_api_test/SKILL.md): 12개 API의 입력/출력 속성, 서울 비즈니스 시나리오, 아키텍처 및 파이썬 자동화 레시피 가이드.
+- [`.agents/skills/map_api_test/SKILL.md`](.agents/skills/map_api_test/SKILL.md): 12개 API의 입력/출력 속성, 서울 비즈니스 시나리오 가이드.
+- [`.agents/skills/map_scenario/SKILL.md`](.agents/skills/map_scenario/SKILL.md): Google Maps + Gemini 3.5 Flash 결합 5단계 음식점 및 맞춤 여행 코스 추천 가이드.
