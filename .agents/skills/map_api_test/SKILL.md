@@ -54,29 +54,3 @@ description: Google Maps Platform API 테스트 노트북(google_maps_api_test.i
 5. **종합 요약 및 레퍼런스 (Markdown)**: 요약 표 및 공식 문서 링크.
 
 ---
-
-## 🤖 4. 노트북 생성 파이썬 레시피
-
-```python
-import json, uuid
-
-def make_cell(cell_type: str, source: str) -> dict:
-    lines = [l if l.endswith("\n") else l + "\n" for l in source.split("\n")]
-    if lines and lines[-1] == "\n": lines.pop()
-    cell = {"cell_type": cell_type, "id": uuid.uuid4().hex[:8], "metadata": {}, "source": lines}
-    if cell_type == "code":
-        cell["execution_count"] = None
-        cell["outputs"] = []
-    return cell
-
-notebook = {
-    "cells": cells,
-    "metadata": {
-        "kernelspec": {"display_name": "Python 3 (.venv)", "language": "python", "name": "python3"},
-        "language_info": {"name": "python", "version": "3.12.0"}
-    },
-    "nbformat": 4, "nbformat_minor": 5
-}
-with open("google_map/google_maps_api_test.ipynb", "w", encoding="utf-8") as f:
-    json.dump(notebook, f, indent=2, ensure_ascii=False)
-```

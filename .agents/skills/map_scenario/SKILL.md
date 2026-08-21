@@ -5,7 +5,7 @@ description: Google Maps Platform API와 Gemini Flash 모델을 결합하여 음
 
 # 🍽️ Google Maps + Gemini AI 음식점 & 여행 코스 시나리오 가이드 (`map_scenario`)
 
-본 가이드는 **Google Maps Platform API**와 **Gemini Flash 모델**을 연계하여 특정 음식점에 대한 5단계 심층 분석 및 맞춤형 여행 코스를 생성하는 주피터 노트북(`map_scenario/restaurant_scenario_recommendation.ipynb`)의 요구사항과 구현 방안을 정의합니다.
+본 가이드는 **Google Maps Platform API**와 **Gemini Flash 모델**을 연계하여 특정 음식점에 대한 5단계 심층 분석 및 맞춤형 여행 코스를 생성하는 주피터 노트북(`google_map/restaurant_scenario_recommendation.ipynb`)의 요구사항과 구현 방안을 정의합니다.
 
 ---
 
@@ -110,48 +110,7 @@ GEMINI_API_KEY=AIzaSy...your_gemini_api_key_here
 
 ---
 
-## 💻 3. 핵심 파이썬 구현 스니펫 (Implementation Template)
-
-```python
-import os, requests, pandas as pd
-from dotenv import load_dotenv
-from google import genai
-
-load_dotenv()
-MAPS_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
-GEMINI_KEY = os.getenv("GEMINI_API_KEY")
-
-# 1. Gemini 클라이언트 초기화
-ai_client = genai.Client(api_key=GEMINI_KEY)
-
-# 2. Places API (New)로 음식점 상세 정보 및 리뷰 수집
-def get_restaurant_data(place_id: str):
-    url = f"https://places.googleapis.com/v1/places/{place_id}"
-    headers = {"X-Goog-Api-Key": MAPS_KEY, "X-Goog-FieldMask": "*"}
-    return requests.get(url, headers=headers, params={"languageCode": "ko"}).json()
-
-# 3. Gemini Flash를 통한 리뷰 기반 메뉴 분석
-def analyze_popular_menus(place_data: dict):
-    reviews_text = "\n".join([r.get("text", {}).get("text", "") for r in place_data.get("reviews", [])])
-    prompt = f"""
-    음식점 '{place_data.get('displayName', {}).get('text')}'의 리뷰 데이터입니다:
-    {reviews_text}
-    
-    위 리뷰를 바탕으로:
-    1. 가장 인기 있는 대표 메뉴 3가지
-    2. 각 메뉴의 맛/특징 및 고객 추천 이유
-    를 한국어로 깔끔하게 정리해주세요.
-    """
-    response = ai_client.models.generate_content(
-        model="gemini-2.5-flash", # or gemini-3.5-flash
-        contents=prompt
-    )
-    return response.text
-```
-
----
-
-## 📁 4. 산출물 노트북 표준 구조 (`restaurant_scenario_recommendation.ipynb`)
+## 📁 3. 산출물 노트북 표준 구조 (`restaurant_scenario_recommendation.ipynb`)
 
 1. **[Markdown] 프로젝트 소개 & 5단계 아키텍처 개요**
 2. **[Code] 라이브러리 임포트 & .env 키 로드 (Maps & Gemini)**
