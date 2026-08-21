@@ -68,7 +68,7 @@ GOOGLE_MAPS_API_KEY=AIzaSy...your_actual_api_key_here
 ### 3. 노트북 실행
 
 VS Code 또는 JupyterLab에서 아래 노트북을 열고 실행합니다:
-1. **[`google_map/google_maps_api_test.ipynb`](google_map/google_maps_api_test.ipynb)**: 12개 Google Maps Platform API의 입출력 및 서울 랜드마크 전수 검증
+1. **[`google_map/map_api_check.ipynb`](google_map/map_api_check.ipynb)**: 12개 Google Maps Platform API의 입출력 및 서울 랜드마크 전수 검증
 2. **[`google_map/recommendation_w_map.ipynb`](google_map/recommendation_w_map.ipynb)**: Gemini 3.5 Flash + Maps API 결합 맛집/리뷰/유사식당/식후카페/도보·차량 여행 코스 추천
 
 ---

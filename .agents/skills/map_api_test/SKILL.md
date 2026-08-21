@@ -1,11 +1,11 @@
 ---
 name: map_api_test
-description: Google Maps Platform API 테스트 노트북(google_maps_api_test.ipynb) 생성 및 유지보수를 위한 간결한 요구사항 가이드.
+description: Google Maps Platform API 테스트 노트북(map_api_check.ipynb) 생성 및 유지보수를 위한 간결한 요구사항 가이드.
 ---
 
 # 🗺️ Google Maps API 테스트 노트북 생성 가이드 (`map_api_test`)
 
-본 가이드는 `google_map/google_maps_api_test.ipynb` 노트북을 일관성 있고 깔끔하게 생성/유지보수하기 위한 핵심 요구사항과 표준 레시피를 정의합니다.
+본 가이드는 `google_map/map_api_check.ipynb` 노트북을 일관성 있고 깔끔하게 생성/유지보수하기 위한 핵심 요구사항과 표준 레시피를 정의합니다.
 
 ---
 
